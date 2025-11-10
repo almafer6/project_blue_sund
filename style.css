@@ -1,0 +1,308 @@
+/* Estilos generales */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #0082bb; /* AZUL BONITO */
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* El contenedor principal del Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada "tarjeta" */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-top: 5px solid #0082bb; /* AZUL BONITO */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #0082bb; /* AZUL BONITO */
+}
+
+.card.contador {
+    position: relative; /* ¡¡SÚPER IMPORTANTE!! */
+    overflow: hidden;   /* Para que los corazones no se salgan */
+}
+
+.card-boton {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-boton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(92, 158, 255, 0.2); /* Sombra AZUL */
+}
+
+/* Estilos del CONTADOR */
+.contador-reloj {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+}
+.bloque-tiempo span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0082bb; /* AZUL BONITO */
+}
+
+/* =========================== */
+/* ESTILOS DEL MODAL           */
+/* =========================== */
+
+/* Pega este en lugar del .modal que tenías */
+.modal {
+    visibility: hidden; /* 1. Oculto por defecto */
+    opacity: 0;         /* 2. Totalmente transparente */
+    
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding-top: 60px; 
+    
+    /* 3. ¡LA MAGIA! Le dice que anime la opacidad en 0.3 segundos */
+    transition: opacity 0.3s ease;
+}
+
+/* Pega esta clase NUEVA */
+.modal-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-top: 5px solid #0082bb; /* AZUL BONITO */
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #0082bb; /* AZUL BONITO */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* === ESTILOS NUEVOS DEL CARRUSEL === */
+.carrusel-contenedor {
+    text-align: center;
+}
+#foto-carrusel {
+    width: 100%;
+    max-height: 400px; /* Altura máxima para que no se desfase */
+    object-fit: contain; /* Asegura que la foto se vea bien */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+#foto-descripcion {
+    font-size: 1.1em;
+    min-height: 2em; /* Evita que salte */
+}
+.carrusel-nav {
+    display: flex;
+    justify-content: space-between; /* Un botón a cada lado */
+    margin-top: 15px;
+}
+.carrusel-nav button,
+#btn-frase-nueva {
+    background-color: #0082bb; /* AZUL BONITO */
+    color: #121212; /* Texto oscuro para contraste */
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.carrusel-nav button:hover,
+#btn-frase-nueva:hover {
+    background-color: #8ab4ff; /* AZUL CLARO */
+}
+/* ================================== */
+
+
+/* Estilos del Modal de Momentos */
+.recuerdo-texto {
+    font-size: 1.3em;
+    min-height: 80px;
+    color: #f0f0f0;
+    text-align: center;
+    border: 1px dashed #555;
+    padding: 20px;
+    border-radius: 5px;
+}
+#btn-frase-nueva {
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+}
+
+.fas {
+    margin-right: 8px;
+}
+.fa-heart {
+    color: #ff4d4d; /* El corazón lo dejamos rojo :3 */
+}
+
+/* =========================== */
+/* ANIMACIÓN DE CORAZONES      */
+/* =========================== */
+
+.corazon-flotante {
+    position: absolute; /* Para que flote sobre el contenido */
+    bottom: -10px;      /* Empieza oculto en la parte de abajo */
+    font-size: 20px;    /* El tamaño del corazón */
+    color: #ff4d4d;     /* El color rojo-corazón que ya usamos */
+    
+    /* ¡Aquí le decimos que use la animación! */
+    animation: flotarHaciaArriba 2s ease-out forwards;
+    
+    /* Para que el mouse no "toque" los corazones */
+    pointer-events: none; 
+    
+    /* Para que se vea más bonito (opcional) */
+    text-shadow: 0 0 5px #ff4d4d;
+}
+
+
+/* 3. Define la animación */
+/* Pega esto también al final de tu style.css */
+
+@keyframes flotarHaciaArriba {
+    from {
+        /* Empieza abajo, visible y en su tamaño */
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        /* Termina 150px arriba, invisible y un poco más grande */
+        transform: translateY(-150px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* ======================================= */
+/* ESTILO DE IMAGEN ÍCONO EN TARJETA ÁLBUM */
+/* ======================================= */
+
+.icono-card-album {
+    width: 150px;      /* Tamaño de la imagen (ajusta si quieres) */
+    height: auto;     /* Mantiene las proporciones */
+    display: block;   /* Hace que ocupe su propia línea */
+    margin: 15px auto; /* Centra la imagen y le da espacio arriba/abajo */
+    opacity: 0.8;     /* Un poco transparente para que no domine (opcional) */
+    transition: opacity 0.3s; /* Animación de opacidad al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse */
+.card-boton:hover .icono-card-album {
+    opacity: 1; /* Se vuelve totalmente visible al pasar el mouse */
+}
+
+
+/* =========================== */
+/* ESTILOS DEL MODAL DE PASS Music: */
+/* =========================== */
+
+#password-input {
+    width: 90%;
+    padding: 12px;
+    margin: 20px 0;
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #FFFFFF; /* Texto blanco */
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#btn-confirmar-pass {
+    background-color: #5c9eff; /* Tu azul */
+    color: #121212;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 100%; /* Ocupa todo el ancho */
+}
+#btn-confirmar-pass:hover {
+    background-color: #8ab4ff;
+}
+
+#password-error {
+    color: #ff4d4d; /* Rojo error */
+    font-size: 0.9em;
+    margin-top: 15px;
+    height: 1em; /* Le da espacio */
+}
+
+/* Animación de "Temblor" para error */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px); }
+    20% { transform: translateX(10px); }
+    30% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    50% { transform: translateX(0); }
+}

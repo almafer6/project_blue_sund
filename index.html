@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Aniversario #1!</title>
+    <meta name="robots" content="noindex, nofollow"> <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>¡Feliz Aniversario, [Nombre de tu novio]!</h1>
+        <p>Nuestro primer año juntos <i class="fas fa-heart"></i></p>
+    </header>
+
+    <main class="dashboard">
+
+        <div class="card contador">
+            <h2><i class="fas fa-hourglass-half"></i> Nuestro Tiempo Juntos</h2>
+            <p>Desde el 16 de Noviembre, 2024</p>
+            <div class="contador-reloj">
+                <div class="bloque-tiempo"><span id="contador-dias">0</span> Días</div>
+                <div class="bloque-tiempo"><span id="contador-horas">0</span> Horas</div>
+                <div class="bloque-tiempo"><span id="contador-minutos">0</span> Min.</div>
+                <div class="bloque-tiempo"><span id="contador-segundos">0</span> Seg.</div>
+            </div>
+        </div>
+
+        <div class="card card-boton" id="open-album-btn">
+            <h2><i class="fas fa-camera-retro"></i> Álbum de Fotos</h2>
+            <img src="imagenes/spiderman-camara.png" alt="Spider-Man con cámara" class="icono-card-album">
+            <p>Ver nuestro carrete del Año 1</p>
+        </div>
+
+        <div class="card card-boton" id="open-momentos-btn">
+            <h2><i class="fas fa-star"></i> Momentos Favoritos</h2>
+            <img src="imagenes/darth-florecita.png" alt="Darth Vader florecita" class="icono-card-album">
+            <p>Haz clic para recordar</p>
+        </div>
+
+        <div class="card card-boton" id="open-mensaje-btn">
+            <h2><i class="fas fa-scroll"></i> Mensaje Secreto</h2>
+            <img src="imagenes/jarrito-cartita.png" alt="Harry cartita" class="icono-card-album">
+            <p>Un mensaje solo para ti...</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Hecho con <i class="fas fa-heart"></i> por [Tu Nombre]</p>
+    </footer>
+
+    
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-album">&times;</span>
+            <h2><i class="fas fa-camera-retro"></i> Nuestro Carrete</h2>
+            
+            <div class="carrusel-contenedor">
+                <img src="imagenes/foto1.jpg" alt="Recuerdo" id="foto-carrusel">
+                <p id="foto-descripcion">Descripción de la foto 1</p>
+                
+                <div class="carrusel-nav">
+                    <button id="btn-prev"><i class="fas fa-chevron-left"></i> Anterior</button>
+                    <button id="btn-next">Siguiente <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="momentos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-momentos">&times;</span>
+            <h2><i class="fas fa-star"></i> Recordando...</h2>
+            <p class="recuerdo-texto" id="frase-recuerdo">"..."</p>
+            <button id="btn-frase-nueva">Siguiente Recuerdo <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div id="mensaje-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-mensaje">&times;</span>
+            <h2><i class="fas fa-scroll"></i> Mi Mensaje Para Ti</h2>
+            <p>
+                Escribe aquí todo lo que sientes...
+            </p>
+            <p style="text-align: right; margin-top: 20px;">
+                Con todo mi amor,<br>
+                [Tu Nombre]
+            </p>
+        </div>
+    </div>
+
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-password">&times;</span>
+            <h2><i class="fas fa-lock"></i> Contraseña Secreta</h2>
+            <p>Ingresa la palabra clave para ver el mensaje:</p>
+            
+            <input type="password" id="password-input" placeholder="Escribe la contraseña aquí...">
+            
+            <button id="btn-confirmar-pass">Confirmar</button>
+            
+            <p id="password-error"></p> </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
