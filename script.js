@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ---Contraseña---
-    const MI_PASSWORD = "remito"; 
+    const MI_PASSWORD = "huevos1"; 
 
 
     // --- Contador de aniversario ---
@@ -158,7 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cuando jugamos a ver quién se libera primero del otro💪👀",
         "Nuestras salidas a comer🍗🍔🍕🌮🍱🍴❤️",
         "Cuando voy a verte jugar🏈😍",
-        "Tu compañia en mis momentos importantes💕🎈"
+        "Tu compañia en mis momentos importantes💕🎈",
+        "Nuestras citas haciendo cafecito☕😋",
+        "Nuestras pláticas❤️‍🩹🤓",
+        "Cuando se nos conecta la neurona😆",
+        "Cuando estamos con nuestros bebés🐈🐈‍⬛❤️"
     ];
     
     const elementoRecuerdo = document.getElementById('frase-recuerdo');
@@ -325,4 +329,5 @@ function crearCorazon() {
 cardContador.addEventListener('mouseover', crearCorazon);
 
     
+
 });
