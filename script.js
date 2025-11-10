@@ -143,26 +143,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ¡¡AQUÍ PONES TUS RECUERDOS!!
     const recuerdos = [
-        "Nuestra primera cita en el circo con esa suerte que nos caracteriza jiji. 💖",
-        "Despídete bien... Mañoso😚",
+        "Nuestra primera cita en el circo con esa suerte que nos caracteriza jiji.💖",
+        "Despídete bien... Mañoso.😚",
         "¿Cuál gracias?🤭",
         "Nuestras citas tomando cafecito.☕😋",
-        "Tu cumple🎈🎂",
-        "Nuestro viajecito en mi cumple🥹💕",
-        "Nuestras salidas al cine 🍿🎞️",
-        "Nuestras risas😄❤️",
-        "Nuestros abrazos🫂❤️",
-        "Nuestros besos😚😚",
-        "Nuestras llamadas para mimir📞😴",
-        "Cuando mimimos juntitos💕",
-        "Cuando jugamos a ver quién se libera primero del otro💪👀",
-        "Nuestras salidas a comer🍗🍔🍕🌮🍱🍴❤️",
-        "Cuando voy a verte jugar🏈😍",
-        "Tu compañia en mis momentos importantes💕🎈",
-        "Nuestras citas haciendo cafecito☕😋",
-        "Nuestras pláticas❤️‍🩹🤓",
-        "Cuando se nos conecta la neurona😆",
-        "Cuando estamos con nuestros bebés🐈🐈‍⬛❤️"
+        "Tu cumple.🎈🎂",
+        "Nuestro viajecito en mi cumple.🥹💕",
+        "Nuestras salidas al cine.🍿🎞️",
+        "Nuestras risas.😄❤️",
+        "Nuestros abrazos.🫂❤️",
+        "Nuestros besos.😚😚",
+        "Nuestras llamadas para mimir.📞😴",
+        "Cuando mimimos juntitos.💕",
+        "Cuando jugamos a ver quién se libera primero del otro.💪👀",
+        "Nuestras salidas a comer.🍗🍔🍕🌮🍱🍴❤️",
+        "Cuando voy a verte jugar.🏈😍",
+        "Tu compañia en mis momentos importantes.💕🎈",
+        "Nuestras citas haciendo cafecito.☕😋",
+        "Nuestras pláticas.❤️‍🩹🤓",
+        "Cuando se nos conecta la neurona.😆",
+        "Cuando estamos con nuestros bebés.🐈🐈‍⬛❤️"
     ];
     
     const elementoRecuerdo = document.getElementById('frase-recuerdo');
@@ -331,3 +331,4 @@ cardContador.addEventListener('mouseover', crearCorazon);
     
 
 });
+
