@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cuando jugamos a ver quién se libera primero del otro.💪👀",
         "Nuestras salidas a comer.🍗🍔🍕🌮🍱🍴❤️",
         "Cuando voy a verte jugar.🏈😍",
-        "Tu compañia en mis momentos importantes.💕🎈",
+        "Tu compañía en momentos importantes.💕🎈",
         "Nuestras citas haciendo cafecito.☕😋",
         "Nuestras pláticas.❤️‍🩹🤓",
         "Cuando se nos conecta la neurona.😆",
@@ -331,4 +331,5 @@ cardContador.addEventListener('mouseover', crearCorazon);
     
 
 });
+
 
